@@ -3,10 +3,10 @@ const output = new Gpio(4, "out");
 
 exports.get = (req, res, next) => {
 
-    output.writeSync(1);
+    output.writeSync(0);
     console.log()
     setTimeout(function() {
-        output.writeSync(0);
+        output.writeSync(1);
         console.log(output.readSync())
     }, 1000);
     
