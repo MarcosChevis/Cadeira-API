@@ -3,13 +3,12 @@ const output = new Gpio(4, "out");
 
 exports.get = (req, res, next) => {
 
-    if(output.readSync() == 0) {
-        output.writeSync(1);
-    } else {
+    output.writeSync(1);
+    setTimeout(function() {
         output.writeSync(0);
-    }
-    console.log(output.readSync());
+    }, 3000);
     
+
     res.status(200).send('Requisição recebida com sucesso!');
 };
 
