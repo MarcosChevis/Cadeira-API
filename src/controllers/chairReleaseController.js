@@ -1,15 +1,16 @@
 const Gpio = require('onoff').Gpio;
-const output = new Gpio(21, "out");
+
 
 exports.get = (req, res, next) => {
 
+    const output = new Gpio(21, "out");
     output.writeSync(1);
     setTimeout(function() {
         output.writeSync(0);
     }, 1000);
     
     
-    //output.unexport();
+    output.unexport();
     res.status(200).send('Requisição recebida com sucesso!');
 };
 
