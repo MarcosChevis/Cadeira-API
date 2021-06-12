@@ -8,8 +8,9 @@
 </head>
 
 <body>
-    <input value="Release" type="button" onclick="chairRelease();">
-
+    <input value="Release 1s" type="button" onclick="chairRelease(1000);">
+    <input type="number" id="time">
+    <input type="button" value="Release for Time" onclick="chairRelease(document.getElementById('time').value)">
 </body>
 
 </html>

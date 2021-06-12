@@ -22,11 +22,12 @@ exports.getById = (req, res, next) => {
 
 exports.post = (req, res, next) => {
 
+    console.log(req.body);
     output.writeSync(1);
     console.log()
     setTimeout(function() {
         output.writeSync(0);
-    }, 1000);
+    }, req.body);
 
     res.status(201).send('Requisição recebida com sucesso!');
 };
