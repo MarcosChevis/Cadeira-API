@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" onclick="callAPI('raspberrypi.local:3000/chair', 'GET', function(){})">
+
+    <script>
+
+        function callAPI(url, method, callback, data) {
+            var xhr = new XMLHttpRequest();
+            xhr.responseType = "json";
+            xhr.open(method, url, true);
+            if (method == "POST" || method == "PATCH") {
+                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            }
+            xhr.onload = function () {
+                callback(xhr.response);
+            }
+            if (data) {
+                xhr.send(JSON.stringify(data));
+            } else {
+                xhr.send();
+            }
+        }
+    </script>
+</body>
+
+</html>
