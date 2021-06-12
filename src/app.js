@@ -12,6 +12,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.use('/', index);
-app.use('/chairReleaseRelease', chairRoute);
+app.use('/chairReleaseRelease', chairReleaseRoute);
 
 module.exports = app;
