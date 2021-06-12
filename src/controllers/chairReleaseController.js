@@ -22,7 +22,7 @@ exports.getById = (req, res, next) => {
 
 exports.post = (req, res, next) => {
 
-    console.log(req.body);
+    console.log(req.body.time);
     output.writeSync(1);
     console.log()
     setTimeout(function() {
