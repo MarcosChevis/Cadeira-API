@@ -1,13 +1,13 @@
 const Gpio = require('onoff').Gpio;
-
+const output = new Gpio(21, "out");
 
 exports.get = (req, res, next) => {
 
-    const output = new Gpio(21, "out");
+    
     output.writeSync(1);
     setTimeout(function() {
         output.writeSync(0);
-        output.unexport();
+        //output.unexport();
     }, 1000);
     
     
