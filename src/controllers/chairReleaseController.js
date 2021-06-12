@@ -7,10 +7,11 @@ exports.get = (req, res, next) => {
     output.writeSync(1);
     setTimeout(function() {
         output.writeSync(0);
+        output.unexport();
     }, 1000);
     
     
-    output.unexport();
+    
     res.status(200).send('Requisição recebida com sucesso!');
 };
 
