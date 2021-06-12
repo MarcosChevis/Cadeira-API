@@ -27,7 +27,7 @@ exports.post = (req, res, next) => {
     console.log()
     setTimeout(function() {
         output.writeSync(0);
-    }, req.body);
+    }, req.body.time);
 
     res.status(201).send('Requisição recebida com sucesso!');
 };
