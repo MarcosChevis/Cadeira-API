@@ -1,5 +1,5 @@
 const Gpio = require('onoff').Gpio;
-const output = new Gpio(7, "out");
+const output = new Gpio(4, "out");
 
 exports.get = (req, res, next) => {
 
