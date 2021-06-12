@@ -7,7 +7,6 @@ exports.get = (req, res, next) => {
     console.log()
     setTimeout(function() {
         output.writeSync(0);
-        console.log(output.readSync())
     }, 1000);
     
     

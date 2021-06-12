@@ -1,8 +1,11 @@
 const express = require('express');
+var cors = require('cors')
 const app = express();
 const bodyParser = require('body-parser');
 
+app.use(cors())
 const router = express.Router();
+
 
 //Rotas
 const index = require('./routes/index');

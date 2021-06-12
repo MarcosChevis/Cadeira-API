@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.12.13",
     "onoff": "^6.0.3",
