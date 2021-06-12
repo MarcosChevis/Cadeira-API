@@ -9,7 +9,7 @@ exports.get = (req, res, next) => {
     }, 1000);
     console.log(output.readSync())
     
-    output.unexport();
+    //output.unexport();
     res.status(200).send('Requisição recebida com sucesso!');
 };
 
