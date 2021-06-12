@@ -4,7 +4,6 @@ const output = new Gpio(4, "out");
 exports.get = (req, res, next) => {
 
     output.writeSync(1);
-    console.log()
     setTimeout(function() {
         output.writeSync(0);
     }, 1000);
@@ -22,6 +21,13 @@ exports.getById = (req, res, next) => {
 
 
 exports.post = (req, res, next) => {
+
+    output.writeSync(1);
+    console.log()
+    setTimeout(function() {
+        output.writeSync(0);
+    }, 1000);
+
     res.status(201).send('Requisição recebida com sucesso!');
 };
 
