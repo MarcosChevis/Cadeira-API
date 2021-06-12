@@ -3,6 +3,6 @@ function chairRelease(time) {
 
     fetch("/chairRelease", {
         method: "POST",
-        body: time
+        body: {"time": time}
       });
 }
