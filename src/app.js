@@ -12,7 +12,7 @@ const router = express.Router();
 //Rotas
 const index = require('./routes/index');
 const chairReleaseRoute = require('./routes/chairReleaseRoute');
-const static = require('./public');
+const static = require('src/public');
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
