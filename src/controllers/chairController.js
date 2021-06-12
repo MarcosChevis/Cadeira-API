@@ -4,10 +4,12 @@ const output = new Gpio(4, "out");
 exports.get = (req, res, next) => {
 
     output.writeSync(1);
+    console.log()
     setTimeout(function() {
         output.writeSync(0);
+        console.log(output.readSync())
     }, 1000);
-    console.log(output.readSync())
+    
     
     //output.unexport();
     res.status(200).send('Requisição recebida com sucesso!');
